@@ -21,7 +21,7 @@ jobs:
     - name: make artifact storage
       run: |
         mkdir -p artifact
-        echo hello > ./artifact/world.txt
+        echo hello > artifact/world.txt
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
@@ -32,4 +32,4 @@ jobs:
     - uses: actions/uplaod-artifact@v3
       with:
         name: my-artifact
-        path: ./artifact/*
+        path: artifact/*
